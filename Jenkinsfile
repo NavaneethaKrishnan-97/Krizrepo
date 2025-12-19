@@ -1,7 +1,8 @@
 pipeline {
 
-    agent any
- 
+    agent {
+        label 'Linux'
+    }
     parameters {
 
         booleanParam(name: 'SKIP_TEST', defaultValue: false, description: 'Skip the test stage')
